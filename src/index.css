@@ -24,3 +24,15 @@ code {
 .pagination .page-link {
   padding: 4px 8px;
 }
+
+.App .banner-container {
+  display: flex;
+  justify-content: center;
+}
+
+.banner {
+  width: 80%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  margin: 20px;
+}

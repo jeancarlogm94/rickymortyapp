@@ -36,12 +36,12 @@ const Location = () => {
         <h5 className="text-center text-light">
           Dimension: {dimension === '' ? 'Unknown' : dimension}
         </h5>
-        <h6 className="text-center text-light">
+        <h5 className="text-center text-light">
           Type: {type === '' ? 'Unknown' : type}
-        </h6>
-        <h6 className="text-center text-light">
+        </h5>
+        <h5 className="text-center text-light">
           Residents: {residents === '' ? 'Unknown' : residents?.length}
-        </h6>
+        </h5>
       </div>
       <div className="row">
         <div className="col-lg-3 col-12 mb-4">
