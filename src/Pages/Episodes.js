@@ -27,17 +27,17 @@ const Episodes = () => {
   return (
     <div className="container">
       <div className="row mb-3">
-        <h1 className="text-center mb-3">
-          Episode name :{' '}
-          <span className="text-primary">{name === '' ? 'Unknown' : name}</span>
+        <h1 className="text-center mb-3 text-light">
+          Episode:{' '}
+          <span className="text-light">{name === '' ? 'Unknown' : name}</span>
         </h1>
-        <h5 className="text-center">
+        <h5 className="text-center text-light">
           Air Date: {air_date === '' ? 'Unknown' : air_date}
         </h5>
       </div>
       <div className="row">
         <div className="col-lg-3 col-12 mb-4">
-          <h4 className="text-center mb-4">Pick Episode</h4>
+          <h4 className="text-center text-light mb-4">Pick Episode</h4>
           <InputGroup name="Episode" changeID={setID} total={51} />
         </div>
         <div className="col-lg-8 col-12">
