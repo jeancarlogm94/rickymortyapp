@@ -27,18 +27,18 @@ const Filter = ({
       >
         Clear Filters
       </div>
-      <div className="accordion" id="myaccordion w-100">
-        <Status
+      <div className="accordion" id="myaccordion">
+        <Gender
           updatePageNumber={updatePageNumber}
-          updateStatus={updateStatus}
+          updateGender={updateGender}
         />
         <Species
           updatePageNumber={updatePageNumber}
           updateSpecies={updateSpecies}
         />
-        <Gender
+        <Status
           updatePageNumber={updatePageNumber}
-          updateGender={updateGender}
+          updateStatus={updateStatus}
         />
       </div>
     </div>

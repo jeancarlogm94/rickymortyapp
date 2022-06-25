@@ -33,9 +33,10 @@ body {
   border-radius: 50%;
   margin: 30px;
   width: 150px;
+  box-shadow: 0 0 1rem 0 var(--color-primary);
 }
 
-.badge {
+.badge {  
   top: 10px;
   right: 20px;
   font-size: 15px;
@@ -44,4 +45,12 @@ body {
 
 .character-name {
   background-color: var(--color-primary);
+}
+
+div .button-status {
+  background-color: blue;
+  border: none;
+  width: 10px;
+  height: 5px;
+  padding: 5px;
 }

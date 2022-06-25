@@ -19,6 +19,67 @@ const Card = ({ page, results, Search }) => {
           <div
             className={`${styles.card} d-flex flex-column justify-content-center`}
           >
+            <div
+              style={{
+                marginLeft: 'auto',
+              }}
+              className="rounded bg-dark  text-light text-end fs-8 px-2 fw-bold"
+            >
+              {(() => {
+                if (status === 'Dead') {
+                  return (
+                    <div>
+                      <button
+                        style={{
+                          backgroundColor: 'red',
+                          marginRight: '5px',
+                          marginBottom: '6px',
+                          borderRadius: '50%',
+                          border: 'none',
+                          height: '12px',
+                          width: '10px',
+                        }}
+                      ></button>
+                      {status}
+                    </div>
+                  );
+                } else if (status === 'Alive') {
+                  return (
+                    <div>
+                      <button
+                        style={{
+                          backgroundColor: '#2ce40f',
+                          marginRight: '5px',
+                          marginBottom: '6px',
+                          borderRadius: '50%',
+                          border: 'none',
+                          height: '12px',
+                          width: '10px',
+                        }}
+                      ></button>
+                      {status}
+                    </div>
+                  );
+                } else {
+                  return (
+                    <div>
+                      <button
+                        style={{
+                          backgroundColor: 'grey',
+                          marginRight: '5px',
+                          marginBottom: '6px',
+                          borderRadius: '50%',
+                          border: 'none',
+                          height: '12px',
+                          width: '10px',
+                        }}
+                      ></button>
+                      {status}
+                    </div>
+                  );
+                }
+              })()}
+            </div>
             <div>
               <img className={`${styles.img} img-fluid`} src={image} alt="" />
               <div
@@ -27,7 +88,7 @@ const Card = ({ page, results, Search }) => {
                   borderTopLeftRadius: '10px',
                   borderTopRightRadius: '10px',
                 }}
-                className="character-name text-center text-light pb-1 fs-5 fw-bold"
+                className="character-name text-center text-light p-1 fs-5 fw-bold"
               >
                 {name}
               </div>
@@ -37,49 +98,21 @@ const Card = ({ page, results, Search }) => {
                   borderBottomLeftRadius: '10px',
                   borderBottomRightRadius: '10px',
                 }}
-                className="text-center p-2 fs-6 fw-bold"
+                className="text-center p-2 fs-7 fw-bold"
               >
                 {location.name}
               </div>
             </div>
           </div>
-
-          {(() => {
-            if (status === 'Dead') {
-              return (
-                <div
-                  className={`${styles.badge} position-absolute badge bg-danger`}
-                >
-                  {status}
-                </div>
-              );
-            } else if (status === 'Alive') {
-              return (
-                <div
-                  className={`${styles.badge} position-absolute badge bg-success`}
-                >
-                  {status}
-                </div>
-              );
-            } else {
-              return (
-                <div
-                  className={`${styles.badge} position-absolute badge bg-secondary`}
-                >
-                  {status}
-                </div>
-              );
-            }
-          })()}
         </Link>
       );
     });
   } else {
     display = (
-      <p>
-        No se encontro personajes con la busqueda
+      <h2 className="text-center my-6 text-light">
+        No characters were found with the search
         {/* <strong>{Search()}"</strong> */}
-      </p>
+      </h2>
     );
   }
 

@@ -13,7 +13,7 @@ const Navbar = () => {
             src={Logo}
             alt="Logo de Rick & Morty"
           />
-          <span className="text-primary"> App</span>
+          <span style={{ color: '#08b2c9' }}> App</span>
         </Link>
         <style jsx>{`
           button[aria-expanded='false'] > .close {
