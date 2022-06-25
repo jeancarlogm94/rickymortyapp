@@ -18,7 +18,7 @@ const Filter = ({
     window.location.reload(false);
   };
   return (
-    <div className="mx-auto col-lg-6 col-10 mb-5">
+    <div className="mx-auto col-lg-4 col-12 mb-5">
       <div className="text-center text-light fw-bold fs-4 mb-2">Filters</div>
       <div
         style={{ cursor: 'pointer' }}
