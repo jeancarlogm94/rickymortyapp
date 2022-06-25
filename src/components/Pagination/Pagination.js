@@ -37,19 +37,19 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
       </style>
       <div>
         <ReactPaginate
-          className="pagination text-light justify-content-center my-4 gap-4"
+          className="pagination text-light my-4 gap-3"
           nextLabel="Next"
           forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
           previousLabel="Prev"
-          previousClassName="btn btn-dark fs-5 prev"
-          nextClassName="btn btn-dark fs-5 next"
+          previousClassName="btn btn-dark fs-6 prev"
+          nextClassName="btn btn-dark fs-6 next"
           activeClassName="active"
           marginPagesDisplayed={width < 576 ? 1 : 2}
           pageRangeDisplayed={width < 576 ? 1 : 2}
           pageCount={info?.pages}
           onPageChange={pageChange}
           pageClassName="page-item"
-          pageLinkClassName="page-link"
+          pageLinkClassName="rounded-2 page-link"
         />
       </div>
     </>
