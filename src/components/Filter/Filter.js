@@ -10,9 +10,9 @@ const Filter = ({
   updateGender,
   updateSpecies,
 }) => {
-  let clear = () => {
-    updateStatus('');
+  const clear = () => {
     updateGender('');
+    updateStatus('');
     updateSpecies('');
     updatePageNumber(1);
     window.location.reload(false);
@@ -27,7 +27,11 @@ const Filter = ({
       >
         Clear Filters
       </div>
-      <div className="accordion" id="accordionExample">
+      <div
+        style={{ backgroundColor: '#212529' }}
+        className="accordion"
+        id="myaccordion w-100"
+      >
         <Status
           updatePageNumber={updatePageNumber}
           updateStatus={updateStatus}

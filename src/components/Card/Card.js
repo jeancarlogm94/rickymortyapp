@@ -1,31 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Card.module.scss';
-// import CardDetails from './CardDetails';
 
-const Card = ({ page, results }) => {
+const Card = ({ page, results, Search }) => {
   let display;
 
   if (results) {
     display = results.map((x) => {
-      let { id, image, name, status, location } = x;
+      const { id, image, name, status, location } = x;
 
       return (
         <Link
           style={{ textDecoration: 'none' }}
           to={`${page}${id}`}
           key={id}
-          className="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 position-relative text-dark"
+          className="mx-auto col-lg-4 col-md-6 col-sm-6 col-12 mb-4 position-relative text-dark"
         >
           <div
             className={`${styles.card} d-flex flex-column justify-content-center`}
           >
-            <img className={`${styles.img} img-fluid`} src={image} alt="" />
-            <div className={`${styles.content}`}>
-              <div className="fs-5 fw-bold mb-4">{name}</div>
-              <div className="">
-                <div className="fs-6 fw-normal">Last Location</div>
-                <div className="fs-5">{location.name}</div>
+            <div>
+              <img className={`${styles.img} img-fluid`} src={image} alt="" />
+              <div
+                style={{
+                  backgroundColor: '#28527a',
+                  borderTopLeftRadius: '10px',
+                  borderTopRightRadius: '10px',
+                }}
+                className="character-name text-center text-light pb-1 fs-5 fw-bold"
+              >
+                {name}
+              </div>
+              <div
+                style={{
+                  backgroundColor: '#08b2c9',
+                  borderBottomLeftRadius: '10px',
+                  borderBottomRightRadius: '10px',
+                }}
+                className="text-center p-2 fs-6 fw-bold"
+              >
+                {location.name}
               </div>
             </div>
           </div>
@@ -61,7 +75,12 @@ const Card = ({ page, results }) => {
       );
     });
   } else {
-    display = 'No Characters Found :/';
+    display = (
+      <p>
+        No se encontro personajes con la busqueda
+        {/* <strong>{Search()}"</strong> */}
+      </p>
+    );
   }
 
   return <>{display}</>;

@@ -1,17 +1,17 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import Logo from '../../assets/img/logo.png';
 import '../../App.scss';
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3 mb-4">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-2 mb-4">
       <div className="container">
         <Link to="/" className="navbar-brand fs-3 ubuntu">
           <img
-            style={{ maxWidth: '200px' }}
-            className="float-left"
-            src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg"
-            alt=""
+            style={{ maxWidth: '180px' }}
+            src={Logo}
+            alt="Logo de Rick & Morty"
           />
           <span className="text-primary"> App</span>
         </Link>
@@ -32,9 +32,9 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
-          <span class="fas fa-bars open text-dark"></span>
-          <span class="fas fa-times close text-dark"></span>
+          <span className="navbar-toggler-icon"></span>
+          <span className="fas fa-bars open text-dark"></span>
+          <span className="fas fa-times close text-dark"></span>
         </button>
         <div
           className="collapse navbar-collapse justify-content-end"

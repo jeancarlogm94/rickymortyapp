@@ -24,6 +24,7 @@ const Search = ({ setSearch, updatePageNumber }) => {
       >
         Search
       </button>
+      {/* <Search Search={Search()} /> */}
     </form>
   );
 };

@@ -1,8 +1,27 @@
 $radius: 10px;
 
+:root {
+	--color-primary: #08b2c9;
+	--color-secondary: #28527a;
+	--color-light: #dbf6e9;
+	--color-dark: #151515;
+}
+
+body {
+  background-image: radial-gradient(circle, #14214a, #003a64, #00536f, #006a68, #007e56, #007e57, #007f57, #007f58, #006b6f, #005482, #003881, #131062);
+}
+
 .card {
-  border: 2px solid #0b5ed7;
+  padding: 10px;
   border-radius: $radius;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s;
+  transition: transform 0.3s;
+  box-shadow: 0 0 1rem 1 rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+  transform: scale(1.1);
 }
 
 .content {
@@ -10,9 +29,10 @@ $radius: 10px;
 }
 
 .img {
+  border: 2px solid (--color-primary);
   border-radius: 50%;
   margin: 30px;
-
+  width: 150px;
 }
 
 .badge {
@@ -20,4 +40,8 @@ $radius: 10px;
   right: 20px;
   font-size: 15px;
   padding: 6px;
+}
+
+.character-name {
+  background-color: var(--color-primary);
 }
