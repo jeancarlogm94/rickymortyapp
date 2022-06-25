@@ -45,14 +45,14 @@ const Navbar = () => {
               Characters
             </NavLink>
             <NavLink to="/episodes" className="nav-link">
-              Episode
+              Episodes
             </NavLink>
             <NavLink
               activeClassName="active"
               className="nav-link"
               to="/location"
             >
-              Location
+              Locations
             </NavLink>
           </div>
         </div>
