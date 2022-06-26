@@ -29,7 +29,7 @@ const Episodes = () => {
     })();
   }, [api]);
 
-  // console.log(results);
+  console.log(results);
 
   return (
     <div className="container">
@@ -40,6 +40,9 @@ const Episodes = () => {
         </h1>
         <h5 className="text-center text-light">
           Air Date: {air_date === '' ? 'Unknown' : air_date}
+        </h5>
+        <h5 className="text-center text-light">
+          Characters: {results === '' ? 'Unknown' : results?.length}
         </h5>
       </div>
       <div className="row">
