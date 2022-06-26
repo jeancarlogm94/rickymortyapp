@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Card.module.scss';
 
-const Card = ({ page, results, search }) => {
+const Card = ({ page, results }) => {
   let display;
-
-  console.log(search);
 
   if (results) {
     display = results.map((x) => {
@@ -102,9 +100,12 @@ const Card = ({ page, results, search }) => {
     });
   } else {
     display = (
-      <h2 className="text-center my-6 text-light">
+      <h2
+        style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}
+        className="rounded text-center my-6 text-light py-5"
+      >
         No characters were found with the search
-        {/* <strong> "{}"</strong> */}
+        {/* <strong>: "{inputSearch}"</strong> */}
       </h2>
     );
   }

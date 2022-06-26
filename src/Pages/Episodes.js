@@ -29,7 +29,7 @@ const Episodes = () => {
     })();
   }, [api]);
 
-  console.log(results);
+  // console.log(results);
 
   return (
     <div className="container">
