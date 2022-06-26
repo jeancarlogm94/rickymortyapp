@@ -104,7 +104,7 @@ const CardDetails = () => {
           {loading ? (
             <Loading />
           ) : (
-            <div>
+            <div className="text-center">
               <img className={`${styles.img} img-fluid`} src={image} alt="" />
               <div
                 style={{
