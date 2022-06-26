@@ -2,7 +2,7 @@ import React from 'react';
 import FilterBTN from '../FilterBTN';
 
 const Species = ({ updateSpecies, updatePageNumber }) => {
-  let species = [
+  const species = [
     'Human',
     'Alien',
     'Humanoid',

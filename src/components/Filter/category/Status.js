@@ -2,24 +2,24 @@ import React from 'react';
 import FilterBTN from '../FilterBTN';
 
 const Status = ({ updateStatus, updatePageNumber }) => {
-  let status = ['Alive', 'Dead', 'Unknown'];
+  const status = ['Alive', 'Dead', 'Unknown'];
   return (
     <div className="accordion-item">
       <h2 className="accordion-header" id="headingOne">
         <button
-          className="accordion-button"
+          className="accordion-button collapsed"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#collapseOne"
-          aria-expanded="true"
-          aria-controls="collapseOne"
+          data-bs-target="#collapseTwo"
+          aria-expanded="false"
+          aria-controls="collapseTwo"
         >
           Status
         </button>
       </h2>
       <div
         id="collapseOne"
-        className="accordion-collapse collapse show"
+        className="accordion-collapse collapse"
         aria-labelledby="headingOne"
         data-bs-parent="#accordionExample"
       >
