@@ -26,10 +26,7 @@ const CardDetails = () => {
           className={`${styles.card} d-flex flex-column justify-content-center`}
         >
           <Link to="/" className="d-flex flex-start">
-            <div
-            // className="position-absolute"
-            // style={{ marginTop: '25px', marginLeft: '10%' }}
-            >
+            <div>
               <i
                 style={{ color: 'rgba(0, 0, 0, 0.4)' }}
                 class="position-absolute fa-solid fa-2x fa-house"
