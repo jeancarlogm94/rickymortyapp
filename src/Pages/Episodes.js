@@ -52,7 +52,7 @@ const Episodes = () => {
             <Loading />
           ) : (
             <div className="row">
-              <Card page="/episodes" results={results} />
+              <Card page="/" results={results} />
             </div>
           )}
         </div>
