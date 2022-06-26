@@ -82,7 +82,7 @@ const Card = ({ page, results }) => {
                 }
               })()}
             </div>
-            <div>
+            <div className="text-center">
               <img className={`${styles.img} img-fluid`} src={image} alt="" />
               <div
                 style={{
