@@ -5,7 +5,6 @@ $radius: 10px;
 	--color-secondary: #28527a;
 	--color-light: #dbf6e9;
 	--color-dark: #151515;
-  --color-terceary: rgba(219, 246, 233, 0.9);
 }
 
 body {
@@ -13,24 +12,18 @@ body {
 }
 
 .card {
-  max-width: 250px;
-  padding: 10px;
+  max-width: 350px;
+  padding: 20px;
   border-radius: $radius;
   background-color: rgba(255, 255, 255, 0.2);
-  transition: box-shadow 0.3s;
-  transition: transform 0.3s;
   box-shadow: 0 0 1rem 1 rgba(255, 255, 255, 0.1);
 }
 
-.card:hover {
-  transform: scale(1.1);
-}
-
 .img {
+  width: 250px;
   border: 2px solid (--color-primary);
   border-radius: 50%;
   margin: 30px;
-  width: 150px;
   box-shadow: 0 0 1rem 0 var(--color-primary);
 }
 

@@ -17,13 +17,15 @@ const Card = ({ page, results, Search }) => {
           className="mx-auto col-md-4 col-sm-6 col-10 mb-4 position-relative text-dark"
         >
           <div
-            className={`${styles.card} d-flex flex-column justify-content-center`}
+            className={`${styles.card} mx-auto d-flex flex-column justify-content-center`}
           >
             <div
               style={{
                 marginLeft: 'auto',
+                borderRadius: '50px',
+                backgroundColor: 'rgba(0, 0, 0, 0.4)',
               }}
-              className="rounded bg-dark  text-light text-end fs-8 px-2 fw-bold"
+              className="text-light text-end fs-8 px-2 fw-bold"
             >
               {(() => {
                 if (status === 'Dead') {
@@ -84,23 +86,12 @@ const Card = ({ page, results, Search }) => {
               <img className={`${styles.img} img-fluid`} src={image} alt="" />
               <div
                 style={{
-                  backgroundColor: '#28527a',
-                  borderTopLeftRadius: '10px',
-                  borderTopRightRadius: '10px',
+                  backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                  borderRadius: '10px',
                 }}
                 className="character-name text-center text-light p-1 fs-5 fw-bold"
               >
                 {name}
-              </div>
-              <div
-                style={{
-                  backgroundColor: '#08b2c9',
-                  borderBottomLeftRadius: '10px',
-                  borderBottomRightRadius: '10px',
-                }}
-                className="text-center p-2 fs-7 fw-bold"
-              >
-                {location.name}
               </div>
             </div>
           </div>
