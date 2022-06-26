@@ -39,11 +39,13 @@ const Navbar = () => {
           <span className="fas fa-times close text-light"></span>
         </button>
         <div className="banner-container">
-          <img
-            className="banner"
-            src="https://preview.redd.it/o6cwlzg3exk41.png?auto=webp&s=eaad71f0c76522a309978bbd65b1a06902e56970"
-            alt="banner rick y morty"
-          />
+          <Link to="/">
+            <img
+              className="banner"
+              src="https://preview.redd.it/o6cwlzg3exk41.png?auto=webp&s=eaad71f0c76522a309978bbd65b1a06902e56970"
+              alt="banner rick y morty"
+            />
+          </Link>
         </div>
         <div
           className="collapse navbar-collapse justify-content-end"
