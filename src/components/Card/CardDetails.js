@@ -106,11 +106,11 @@ const CardDetails = () => {
               backgroundColor: 'rgba(0, 0, 0, 0.3)',
               borderRadius: '10px',
             }}
-            className="content py-2 mt-0 text-light text-center"
+            className="content px-2 py-3 mt-0 text-light text-center"
           >
             <h1 className="text-center text-light">{name}</h1>
             <div className="">
-              <span className="fw-bold">Gender : </span>
+              <span className="fw-bold">Gender: </span>
               {gender}
             </div>
             <div className="">
