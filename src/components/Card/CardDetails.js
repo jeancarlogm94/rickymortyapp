@@ -24,7 +24,7 @@ const CardDetails = () => {
       <Link to="/" className="d-flex flex-start">
         <div
           className="position-absolute"
-          style={{ marginTop: '20px', marginLeft: '10%' }}
+          style={{ marginTop: '25px', marginLeft: '10%' }}
         >
           <i
             style={{ color: 'rgba(0, 0, 0, 0.4)' }}
