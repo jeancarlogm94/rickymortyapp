@@ -101,8 +101,8 @@ const Card = ({ page, results }) => {
   } else {
     display = (
       <h2
-        style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}
-        className="rounded text-center my-6 text-light py-5"
+        style={{ width: '80%', backgroundColor: 'rgba(0, 0, 0, 0.4)' }}
+        className="mx-auto rounded text-center my-6 text-light py-5"
       >
         No characters were found with the search
         {/* <strong>: "{inputSearch}"</strong> */}
