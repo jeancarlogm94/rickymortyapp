@@ -33,21 +33,29 @@ const Location = () => {
 
   return (
     <div className="container">
-      <div className="row mb-3">
-        <h1 className="text-center text-light mb-3">
-          Location {id}:
-          <span className="text-light"> {name === '' ? 'Unknown' : name}</span>
-        </h1>
-        <h5 className="text-center text-light">
-          Dimension: {dimension === '' ? 'Unknown' : dimension}
-        </h5>
-        <h5 className="text-center text-light">
-          Type: {type === '' ? 'Unknown' : type}
-        </h5>
-        <h5 className="text-center text-light">
-          Residents: {residents === '' ? 'Unknown' : residents?.length}
-        </h5>
-      </div>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div className="row mb-3">
+          <h1 className="text-center text-light mb-3">
+            Location {id}:
+            <span className="text-light">
+              {' '}
+              {name === '' ? 'Unknown' : name}
+            </span>
+          </h1>
+          <h5 className="text-center text-light">
+            Dimension: {dimension === '' ? 'Unknown' : dimension}
+          </h5>
+          <h5 className="text-center text-light">
+            Type: {type === '' ? 'Unknown' : type}
+          </h5>
+          <h5 className="text-center text-light">
+            Residents: {residents === '' ? 'Unknown' : residents?.length}
+          </h5>
+        </div>
+      )}
+
       <div className="row">
         <div className="col-lg-3 col-12 mb-4">
           <h4 className="text-center mb-4 text-light">Select Location</h4>

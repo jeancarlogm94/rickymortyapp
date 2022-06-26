@@ -33,18 +33,23 @@ const Episodes = () => {
 
   return (
     <div className="container">
-      <div className="row mb-3">
-        <h1 className="text-center mb-3 text-light">
-          Episode {id}:{' '}
-          <span className="text-light">{name === '' ? 'Unknown' : name}</span>
-        </h1>
-        <h5 className="text-center text-light">
-          Air Date: {air_date === '' ? 'Unknown' : air_date}
-        </h5>
-        <h5 className="text-center text-light">
-          Characters: {results === '' ? 'Unknown' : results?.length}
-        </h5>
-      </div>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div className="row mb-3">
+          <h1 className="text-center mb-3 text-light">
+            Episode {id}:{' '}
+            <span className="text-light">{name === '' ? 'Unknown' : name}</span>
+          </h1>
+          <h5 className="text-center text-light">
+            Air Date: {air_date === '' ? 'Unknown' : air_date}
+          </h5>
+          <h5 className="text-center text-light">
+            Characters: {results === '' ? 'Unknown' : results?.length}
+          </h5>
+        </div>
+      )}
+
       <div className="row">
         <div className="col-lg-3 col-12 mb-4">
           <h4 className="text-center text-light mb-4">Select Episode</h4>
