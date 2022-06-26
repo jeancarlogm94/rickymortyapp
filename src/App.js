@@ -19,13 +19,13 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <div className="banner-container">
+        {/* <div className="banner-container">
           <img
             className="banner"
             src="https://preview.redd.it/o6cwlzg3exk41.png?auto=webp&s=eaad71f0c76522a309978bbd65b1a06902e56970"
             alt="banner rick y morty"
           />
-        </div>
+        </div> */}
       </div>
       <Routes>
         <Route path="/" element={<Home />} />

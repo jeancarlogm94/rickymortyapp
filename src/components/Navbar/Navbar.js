@@ -35,10 +35,16 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
-          <span className="fas fa-bars open text-dark"></span>
-          <span className="fas fa-times close text-dark"></span>
+          <span className="fas fa-bars open text-light"></span>
+          <span className="fas fa-times close text-light"></span>
         </button>
+        <div className="banner-container">
+          <img
+            className="banner"
+            src="https://preview.redd.it/o6cwlzg3exk41.png?auto=webp&s=eaad71f0c76522a309978bbd65b1a06902e56970"
+            alt="banner rick y morty"
+          />
+        </div>
         <div
           className="collapse navbar-collapse justify-content-end"
           id="navbarNavAltMarkup"
