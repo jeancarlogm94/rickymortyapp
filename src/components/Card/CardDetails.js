@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import styles from './CardDetail.module.scss';
+import Loading from '../Loading/Loading';
 
 const CardDetails = () => {
   const { id } = useParams();
+  const [loading, setLoading] = useState(false);
   const [fetchedData, updateFetchedData] = useState([]);
   const { name, location, origin, gender, image, status, species, episode } =
     fetchedData;
@@ -11,9 +13,11 @@ const CardDetails = () => {
   const api = `https://rickandmortyapi.com/api/character/${id}`;
 
   useEffect(() => {
+    setLoading(true);
     (async function () {
       const data = await fetch(api).then((res) => res.json());
       updateFetchedData(data);
+      setLoading(false);
     })();
   }, [api]);
 
@@ -96,37 +100,43 @@ const CardDetails = () => {
               }
             })()}
           </div>
-          <img className={`${styles.img} img-fluid`} src={image} alt="" />
 
-          <div
-            style={{
-              backgroundColor: 'rgba(0, 0, 0, 0.3)',
-              borderRadius: '10px',
-            }}
-            className="content px-2 py-3 mt-0 text-light text-center"
-          >
-            <h1 className="text-center text-light">{name}</h1>
-            <div className="">
-              <span className="fw-bold">Gender: </span>
-              {gender}
+          {loading ? (
+            <Loading />
+          ) : (
+            <div>
+              <img className={`${styles.img} img-fluid`} src={image} alt="" />
+              <div
+                style={{
+                  backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                  borderRadius: '10px',
+                }}
+                className="content px-2 py-3 mt-0 text-light text-center"
+              >
+                <h1 className="text-center text-light">{name}</h1>
+                <div className="">
+                  <span className="fw-bold">Gender: </span>
+                  {gender}
+                </div>
+                <div className="">
+                  <span className="fw-bold">Location: </span>
+                  {location?.name}
+                </div>
+                <div className="">
+                  <span className="fw-bold">Origin: </span>
+                  {origin?.name}
+                </div>
+                <div className="">
+                  <span className="fw-bold">Species: </span>
+                  {species}
+                </div>
+                <div className="">
+                  <span className="fw-bold">Episodes: </span>
+                  {episode?.length}
+                </div>
+              </div>
             </div>
-            <div className="">
-              <span className="fw-bold">Location: </span>
-              {location?.name}
-            </div>
-            <div className="">
-              <span className="fw-bold">Origin: </span>
-              {origin?.name}
-            </div>
-            <div className="">
-              <span className="fw-bold">Species: </span>
-              {species}
-            </div>
-            <div className="">
-              <span className="fw-bold">Episodes: </span>
-              {episode?.length}
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
