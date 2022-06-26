@@ -5,7 +5,10 @@ import '../../App.scss';
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-2 mb-2">
+    <nav
+      style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}
+      className="navbar navbar-expand-lg navbar-dark py-2 mb-2"
+    >
       <div className="container">
         <Link to="/" className="navbar-brand fs-3 ubuntu">
           <img
