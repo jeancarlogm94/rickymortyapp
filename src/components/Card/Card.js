@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Card.module.scss';
 
-const Card = ({ page, results, Search }) => {
+const Card = ({ page, results, search }) => {
   let display;
+
+  console.log(search);
 
   if (results) {
     display = results.map((x) => {
@@ -102,7 +104,7 @@ const Card = ({ page, results, Search }) => {
     display = (
       <h2 className="text-center my-6 text-light">
         No characters were found with the search
-        {/* <strong>{Search()}"</strong> */}
+        {/* <strong> "{}"</strong> */}
       </h2>
     );
   }
