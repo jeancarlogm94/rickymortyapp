@@ -25,9 +25,12 @@ const CardDetails = () => {
       <Link to="/" className="d-flex flex-start">
         <div
           className="position-absolute"
-          style={{ marginTop: '10px', marginLeft: '10%' }}
+          style={{ marginTop: '15px', marginLeft: '10%' }}
         >
-          <img style={{ width: '40px', height: '40px' }} src={back} alt="" />
+          <i
+            style={{ color: 'rgba(0, 0, 0, 0.4)' }}
+            class="fa-solid fa-2x fa-house"
+          ></i>
         </div>
       </Link>
       <div className="container d-flex justify-content-center mb-5">
