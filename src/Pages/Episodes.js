@@ -1,26 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../components/Card/Card';
 import InputGroup from '../components/Filter/category/InputGroup';
+import Loading from '../components/Loading/Loading';
 
 const Episodes = () => {
-  let [results, setResults] = React.useState([]);
-  let [info, setInfo] = useState([]);
-  let { air_date, name } = info;
-  let [id, setID] = useState(1);
+  const [loading, setLoading] = useState(false);
+  const [results, setResults] = React.useState([]);
+  const [info, setInfo] = useState([]);
+  const { air_date, name } = info;
+  const [id, setID] = useState(1);
 
-  let api = `https://rickandmortyapi.com/api/episode/${id}`;
+  const api = `https://rickandmortyapi.com/api/episode/${id}`;
 
   useEffect(() => {
+    setLoading(true);
     (async function () {
-      let data = await fetch(api).then((res) => res.json());
+      const data = await fetch(api).then((res) => res.json());
       setInfo(data);
+      setLoading(false);
 
-      let a = await Promise.all(
+      const a = await Promise.all(
         data.characters.map((x) => {
           return fetch(x).then((res) => res.json());
         })
       );
       setResults(a);
+      setLoading(false);
     })();
   }, [api]);
 
@@ -43,9 +48,13 @@ const Episodes = () => {
           <InputGroup name="Episode" changeID={setID} total={51} />
         </div>
         <div className="col-lg-8 col-12">
-          <div className="row">
-            <Card page="/episodes/" results={results} />
-          </div>
+          {loading ? (
+            <Loading />
+          ) : (
+            <div className="row">
+              <Card page="/episodes" results={results} />
+            </div>
+          )}
         </div>
       </div>
     </div>

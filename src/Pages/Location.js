@@ -1,26 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../components/Card/Card';
 import InputGroup from '../components/Filter/category/InputGroup';
+import Loading from '../components/Loading/Loading';
 
 const Location = () => {
-  let [results, setResults] = React.useState([]);
-  let [info, setInfo] = useState([]);
-  let { id, dimension, type, name, residents } = info;
-  let [number, setNumber] = useState(1);
+  const [loading, setLoading] = useState(false);
+  const [results, setResults] = React.useState([]);
+  const [info, setInfo] = useState([]);
+  const { id, dimension, type, name, residents } = info;
+  const [number, setNumber] = useState(1);
 
-  let api = `https://rickandmortyapi.com/api/location/${number}`;
+  const api = `https://rickandmortyapi.com/api/location/${number}`;
 
   useEffect(() => {
+    setLoading(true);
     (async function () {
-      let data = await fetch(api).then((res) => res.json());
+      const data = await fetch(api).then((res) => res.json());
       setInfo(data);
+      setLoading(false);
 
-      let a = await Promise.all(
+      const a = await Promise.all(
         data.residents.map((x) => {
           return fetch(x).then((res) => res.json());
         })
       );
       setResults(a);
+      setLoading(false);
     })();
   }, [api]);
 
@@ -49,9 +54,13 @@ const Location = () => {
           <InputGroup name="Location" changeID={setNumber} total={126} />
         </div>
         <div className="col-lg-8 col-12">
-          <div className="row">
-            <Card page="/location/" results={results} />
-          </div>
+          {loading ? (
+            <Loading />
+          ) : (
+            <div className="row">
+              <Card page="/location" results={results} />
+            </div>
+          )}
         </div>
       </div>
     </div>
