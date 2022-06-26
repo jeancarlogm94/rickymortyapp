@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import styles from './CardDetail.module.scss';
-import back from '../../assets/img/back.png';
 
 const CardDetails = () => {
   const { id } = useParams();
@@ -25,7 +24,7 @@ const CardDetails = () => {
       <Link to="/" className="d-flex flex-start">
         <div
           className="position-absolute"
-          style={{ marginTop: '15px', marginLeft: '10%' }}
+          style={{ marginTop: '20px', marginLeft: '10%' }}
         >
           <i
             style={{ color: 'rgba(0, 0, 0, 0.4)' }}
@@ -33,7 +32,7 @@ const CardDetails = () => {
           ></i>
         </div>
       </Link>
-      <div className="container d-flex justify-content-center mb-5">
+      <div className="container d-flex justify-content-center">
         <div
           className={`${styles.card} d-flex flex-column justify-content-center`}
         >
