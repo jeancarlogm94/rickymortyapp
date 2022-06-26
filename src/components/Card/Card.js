@@ -7,7 +7,7 @@ const Card = ({ page, results, Search }) => {
 
   if (results) {
     display = results.map((x) => {
-      const { id, image, name, status, location } = x;
+      const { id, image, name, status } = x;
 
       return (
         <Link
