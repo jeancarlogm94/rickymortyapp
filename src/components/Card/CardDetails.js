@@ -27,7 +27,7 @@ const CardDetails = () => {
           className="position-absolute"
           style={{ marginTop: '10px', marginLeft: '10%' }}
         >
-          <img style={{ width: '50px', height: '50px' }} src={back} alt="" />
+          <img style={{ width: '40px', height: '40px' }} src={back} alt="" />
         </div>
       </Link>
       <div className="container d-flex justify-content-center mb-5">
