@@ -21,21 +21,21 @@ const CardDetails = () => {
 
   return (
     <div className="d-flex flex-start">
-      <Link to="/" className="d-flex flex-start">
-        <div
-          className="position-absolute"
-          style={{ marginTop: '25px', marginLeft: '10%' }}
-        >
-          <i
-            style={{ color: 'rgba(0, 0, 0, 0.4)' }}
-            class="fa-solid fa-2x fa-house"
-          ></i>
-        </div>
-      </Link>
       <div className="container d-flex justify-content-center">
         <div
           className={`${styles.card} d-flex flex-column justify-content-center`}
         >
+          <Link to="/" className="d-flex flex-start">
+            <div
+            // className="position-absolute"
+            // style={{ marginTop: '25px', marginLeft: '10%' }}
+            >
+              <i
+                style={{ color: 'rgba(0, 0, 0, 0.4)' }}
+                class="position-absolute fa-solid fa-2x fa-house"
+              ></i>
+            </div>
+          </Link>
           <div
             style={{
               marginLeft: 'auto',
