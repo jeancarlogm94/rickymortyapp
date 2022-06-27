@@ -51,7 +51,7 @@ const Navbar = () => {
           className="collapse navbar-collapse justify-content-end"
           id="navbarNavAltMarkup"
         >
-          <div className="navbar-nav fs-5">
+          <div className="text-center navbar-nav fs-5">
             <NavLink to="/" activeClassName="active" className="nav-link">
               Characters
             </NavLink>
