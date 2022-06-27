@@ -65,9 +65,9 @@ const Navbar = () => {
             <NavLink
               activeClassName="active"
               className="nav-link"
-              to="/locations"
+              to="/location"
             >
-              Locations
+              Location
             </NavLink>
           </div>
         </div>
