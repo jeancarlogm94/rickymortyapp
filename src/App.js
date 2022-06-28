@@ -13,12 +13,14 @@ import Episodes from './Pages/Episodes';
 import Location from './Pages/Location';
 import CardDetails from './components/Card/CardDetails';
 import Loading from './components/Loading/Loading';
+// import NavBar2 from './components/Navbar/Navbar2';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
+        {/* <NavBar2 /> */}
       </div>
       <Routes>
         <Route path="/" element={<Home />} />

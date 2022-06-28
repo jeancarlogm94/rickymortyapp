@@ -19,7 +19,7 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
 
   return (
     <>
-      <style jsx>
+      {/* <style jsx>
         {`
           @media (max-width: 768px) {
             .pagination {
@@ -36,7 +36,7 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
             }
           }
         `}
-      </style>
+      </style> */}
       <div>
         <ReactPaginate
           className="pagination text-light my-4 gap-3"
