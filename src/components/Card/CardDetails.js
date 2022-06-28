@@ -33,7 +33,7 @@ const CardDetails = () => {
             <div>
               <i
                 style={{ color: 'rgba(0, 0, 0, 0.4)' }}
-                class="position-absolute fa-solid fa-2x fa-house"
+                className="position-absolute fa-solid fa-2x fa-house"
               ></i>
             </div>
           </Link>

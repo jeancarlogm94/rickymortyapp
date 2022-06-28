@@ -5,7 +5,7 @@ import styles from './Card.module.scss';
 const Card = ({ page, results }) => {
   let display;
 
-  console.log(results);
+  // console.log(results);
 
   if (results) {
     display = results.map((x) => {
