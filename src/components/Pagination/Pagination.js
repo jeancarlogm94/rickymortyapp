@@ -37,9 +37,9 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
           }
         `}
       </style> */}
-      <div>
+      <div className="mb-5">
         <ReactPaginate
-          className="pagination text-light my-4 gap-3"
+          className="pagination text-light gap-3"
           nextLabel="Next"
           forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
           previousLabel="Prev"
