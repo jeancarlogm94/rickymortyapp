@@ -73,7 +73,7 @@ const Home = () => {
             updateSpecies={updateSpecies}
             updatePageNumber={updatePageNumber}
           />
-          <div className="col-lg-8 col-12">
+          <div className="col-lg-9 col-12">
             <Pagination
               info={info}
               pageNumber={pageNumber}

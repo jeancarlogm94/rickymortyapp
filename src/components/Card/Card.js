@@ -16,7 +16,7 @@ const Card = ({ page, results }) => {
           style={{ textDecoration: 'none' }}
           to={`${page}${id}`}
           key={id}
-          className="mx-auto col-md-4 col-sm-6 col-10 mb-4 position-relative text-dark"
+          className="mx-auto col-md-4 col-sm-6 col-12 mb-4 position-relative text-dark"
         >
           <div
             className={`${styles.card} mx-auto d-flex flex-column justify-content-center`}
