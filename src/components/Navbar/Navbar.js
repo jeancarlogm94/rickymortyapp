@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav
       style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}
-      className="navbar navbar-expand-lg navbar-dark py-2 mb-4"
+      className="position navbar navbar-expand-lg navbar-dark py-2 mb-4"
     >
       <div className="container">
         <Link to="/" className="navbar-brand fs-3 ubuntu">
