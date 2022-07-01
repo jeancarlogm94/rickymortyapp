@@ -59,7 +59,7 @@ const Episodes = () => {
           <h4 className="text-center text-light mb-4">Select Episode</h4>
           <InputGroup name="Episode" changeID={setID} total={51} />
         </div>
-        <div className="col-lg-8 col-12">
+        <div className="col-lg-9 col-12">
           {loading ? (
             <Loading />
           ) : (

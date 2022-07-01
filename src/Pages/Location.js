@@ -61,7 +61,7 @@ const Location = () => {
           <h4 className="text-center mb-4 text-light">Select Location</h4>
           <InputGroup name="Location" changeID={setNumber} total={126} />
         </div>
-        <div className="col-lg-8 col-12">
+        <div className="col-lg-9 col-12">
           {loading ? (
             <Loading />
           ) : (
