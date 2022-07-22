@@ -29,8 +29,6 @@ const Episodes = () => {
     })();
   }, [api]);
 
-  console.log(info);
-
   return (
     <div className="container">
       {loading ? (

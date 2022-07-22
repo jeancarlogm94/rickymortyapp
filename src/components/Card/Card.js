@@ -5,7 +5,7 @@ import styles from './Card.module.scss';
 const Card = ({ page, results }) => {
   let display;
 
-  // console.log(results);
+  console.log(results);
 
   if (results) {
     display = results.map((x) => {
@@ -102,13 +102,23 @@ const Card = ({ page, results }) => {
     });
   } else {
     display = (
-      <h2
-        style={{ width: '80%', backgroundColor: 'rgba(0, 0, 0, 0.4)' }}
-        className="mx-auto rounded text-center my-6 text-light py-5"
+      <div
+        style={{
+          marginBottom: '50px',
+        }}
       >
-        No characters were found with the search
-        {/* <strong>: "{inputSearch}"</strong> */}
-      </h2>
+        <h2
+          style={{
+            width: '80%',
+            height: '100%',
+            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+          }}
+          className="mx-auto rounded text-center my-6 text-light py-5"
+        >
+          No characters were found with the search
+          {/* <strong>: "{inputSearch}"</strong> */}
+        </h2>
+      </div>
     );
   }
 
