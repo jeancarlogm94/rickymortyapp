@@ -19,30 +19,12 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
 
   return (
     <>
-      {/* <style jsx>
-        {`
-          @media (max-width: 768px) {
-            .pagination {
-              font-size: 12px;
-            }
-            .next,
-            .prev {
-              display: none;
-            }
-          }
-          @media (max-width: 768px) {
-            .pagination {
-              font-size: 14px;
-            }
-          }
-        `}
-      </style> */}
       <div className="mb-5">
         <ReactPaginate
           className="pagination text-light gap-3"
-          nextLabel=">"
+          nextLabel={<i class="fa-solid fa-angles-right"></i>}
           forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
-          previousLabel="<"
+          previousLabel={<i class="fa-solid fa-angles-left"></i>}
           previousClassName="btn btn-dark fs-6 prev"
           nextClassName="btn btn-dark fs-6 next"
           activeClassName="active"
