@@ -19,11 +19,11 @@ const Filter = ({
   };
   return (
     <div className="mx-auto col-lg-3 col-10 mb-5">
-      <div className="text-center text-light fw-bold fs-4 mb-2">Filters</div>
+      <div className="text-center text-light fw-bold fs-2 mb-2">Filters</div>
       <div
         style={{ cursor: 'pointer' }}
         onClick={clear}
-        className="text-light text-center mb-3"
+        className="text-light text-center mb-3 fs-4"
       >
         Clear Filters
       </div>
