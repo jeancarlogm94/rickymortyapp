@@ -40,9 +40,9 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
       <div className="mb-5">
         <ReactPaginate
           className="pagination text-light gap-3"
-          nextLabel="Next"
+          nextLabel=">"
           forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
-          previousLabel="Prev"
+          previousLabel="<"
           previousClassName="btn btn-dark fs-6 prev"
           nextClassName="btn btn-dark fs-6 next"
           activeClassName="active"
