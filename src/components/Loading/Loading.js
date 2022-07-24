@@ -3,7 +3,7 @@ import './loading.css';
 
 const Loading = () => {
   return (
-    <div className="mx-auto text-center py-5">
+    <div className=" loading mx-auto text-center">
       <div class="lds-hourglass"></div>
     </div>
   );

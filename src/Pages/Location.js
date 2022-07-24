@@ -17,7 +17,7 @@ const Location = () => {
     (async function () {
       const data = await fetch(api).then((res) => res.json());
       setInfo(data);
-      setLoading(false);
+      setTimeout(() => setLoading(), 1200);
 
       const a = await Promise.all(
         data.residents.map((x) => {
@@ -25,7 +25,7 @@ const Location = () => {
         })
       );
       setResults(a);
-      setLoading(false);
+      setTimeout(() => setLoading(), 1200);
     })();
   }, [api]);
 

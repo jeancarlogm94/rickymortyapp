@@ -17,7 +17,7 @@ const Episodes = () => {
     (async function () {
       const data = await fetch(api).then((res) => res.json());
       setInfo(data);
-      setLoading(false);
+      setTimeout(() => setLoading(), 1200);
 
       const a = await Promise.all(
         data.characters.map((x) => {
@@ -25,7 +25,7 @@ const Episodes = () => {
         })
       );
       setResults(a);
-      setLoading(false);
+      setTimeout(() => setLoading(), 1200);
     })();
   }, [api]);
 
