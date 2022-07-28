@@ -15,8 +15,6 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
     return () => window.removeEventListener('resize', updateDimensions);
   }, []);
 
-  // console.log(info);
-
   return (
     <>
       <div className="mb-5">

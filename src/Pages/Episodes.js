@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Card from '../components/Card/Card';
 import InputGroup from '../components/Filter/category/InputGroup';
 import Loading from '../components/Loading/Loading';
+import axios from 'axios';
 
 const Episodes = () => {
   const [loading, setLoading] = useState(false);
-  const [results, setResults] = React.useState([]);
+  const [results, setResults] = useState([]);
   const [info, setInfo] = useState([]);
   const { air_date, name } = info;
   const [id, setID] = useState(1);
@@ -14,10 +15,11 @@ const Episodes = () => {
 
   useEffect(() => {
     setLoading(true);
+    axios.get(api).then((res) => setInfo(res.data));
     (async function () {
       const data = await fetch(api).then((res) => res.json());
       setInfo(data);
-      setTimeout(() => setLoading(), 1200);
+      setTimeout(() => setLoading(), 1000);
 
       const a = await Promise.all(
         data.characters.map((x) => {
@@ -25,7 +27,7 @@ const Episodes = () => {
         })
       );
       setResults(a);
-      setTimeout(() => setLoading(), 1200);
+      setTimeout(() => setLoading(), 1000);
     })();
   }, [api]);
 

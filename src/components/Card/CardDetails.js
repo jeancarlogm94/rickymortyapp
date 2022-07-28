@@ -17,11 +17,9 @@ const CardDetails = () => {
     (async function () {
       const data = await fetch(api).then((res) => res.json());
       updateFetchedData(data);
-      setTimeout(() => setLoading(), 1200);
+      setTimeout(() => setLoading(), 1000);
     })();
   }, [api]);
-
-  // console.log(fetchedData);
 
   return (
     <div className="d-flex flex-start">
@@ -42,8 +40,10 @@ const CardDetails = () => {
               marginLeft: 'auto',
               borderRadius: '50px',
               backgroundColor: 'rgba(0, 0, 0, 0.4)',
+              paddingLeft: '10px',
+              paddingRight: '10px',
             }}
-            className="text-light text-end fs-8 px-2 fw-bold"
+            className="text-light text-end fs-8 fw-bold"
           >
             {(() => {
               if (status === 'Dead') {
@@ -113,7 +113,7 @@ const CardDetails = () => {
                 }}
                 className="content px-2 py-3 mt-0 text-light text-center"
               >
-                <h1 className="text-center text-light">{name}</h1>
+                <h2 className="text-center text-light">{name}</h2>
                 <div className="">
                   <span className="fw-bold">Gender: </span>
                   {gender}

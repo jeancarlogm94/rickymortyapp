@@ -51,7 +51,7 @@ const Home = () => {
     (async function () {
       const data = await fetch(api).then((res) => res.json());
       updateFetchedData(data);
-      setTimeout(() => setLoading(), 1200);
+      setTimeout(() => setLoading(), 1000);
     })();
   }, [api]);
 

@@ -112,11 +112,11 @@ const Card = ({ page, results }) => {
             width: '80%',
             height: '100%',
             backgroundColor: 'rgba(0, 0, 0, 0.4)',
+            color: '#08b2c9',
           }}
-          className="mx-auto rounded text-center my-6 text-light py-5"
+          className="mx-auto rounded text-center my-6 py-5"
         >
-          No characters were found with the search
-          {/* <strong>: "{inputSearch}"</strong> */}
+          Character Not Found
         </h2>
       </div>
     );

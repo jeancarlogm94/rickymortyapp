@@ -5,7 +5,7 @@ import Loading from '../components/Loading/Loading';
 
 const Location = () => {
   const [loading, setLoading] = useState(false);
-  const [results, setResults] = React.useState([]);
+  const [results, setResults] = useState([]);
   const [info, setInfo] = useState([]);
   const { id, dimension, type, name, residents } = info;
   const [number, setNumber] = useState(1);
@@ -17,7 +17,7 @@ const Location = () => {
     (async function () {
       const data = await fetch(api).then((res) => res.json());
       setInfo(data);
-      setTimeout(() => setLoading(), 1200);
+      setTimeout(() => setLoading(), 1000);
 
       const a = await Promise.all(
         data.residents.map((x) => {
@@ -25,11 +25,9 @@ const Location = () => {
         })
       );
       setResults(a);
-      setTimeout(() => setLoading(), 1200);
+      setTimeout(() => setLoading(), 1000);
     })();
   }, [api]);
-
-  // console.log(results);
 
   return (
     <div className="container">
@@ -39,10 +37,7 @@ const Location = () => {
         <div className="row mb-3">
           <h1 className="text-center text-light mb-3">
             Location {id}:
-            <span className="text-light">
-              {' '}
-              {name === '' ? 'Unknown' : name}
-            </span>
+            <span className="text-light">{name === '' ? 'Unknown' : name}</span>
           </h1>
           <h5 className="text-center text-light">
             Dimension: {dimension === '' ? 'Unknown' : dimension}
