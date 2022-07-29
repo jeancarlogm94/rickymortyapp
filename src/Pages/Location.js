@@ -37,7 +37,10 @@ const Location = () => {
         <div className="row mb-3">
           <h1 className="text-center text-light mb-3">
             Location {id}:
-            <span className="text-light">{name === '' ? 'Unknown' : name}</span>
+            <span className="text-light">
+              {' '}
+              {name === '' ? 'Unknown' : name}
+            </span>
           </h1>
           <h5 className="text-center text-light">
             Dimension: {dimension === '' ? 'Unknown' : dimension}
